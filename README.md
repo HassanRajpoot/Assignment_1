@@ -21,3 +21,23 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/HassanRajpoot/Assignement_1.git
 cd Assignement_1
+
+also the venv are as follow
+DEBUG=True
+SECRET_KEY=your-secret-key
+
+DB_ENGINE=
+DB_NAME=
+DB_USER=
+DB_PASSWORD=
+DB_HOST=
+DB_PORT=
+CELERY_BROKER_URL=
+CELERY_RESULT_BACKEND=
+
+Start Celery Worker:
+celery -A stock_trading worker -E -l info
+
+Start Flower (Task Monitoring):
+celery -A stock_trading.celery_app flower
+
